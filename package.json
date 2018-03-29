@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "amany9000",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.85.0",
+    "yargs": "^11.0.0"
+  },
+  "devDependencies": {},
+  "description": "Node based weeather app which takes a location (address or postal code) and provides its real time weather statistics. Uses the Google Maps API for geolocation (retrieving latitude and Longitutde). The Dark Sky Forecast API is used for retireving the the curent weather statistics of the geolocation provided by the Google Maps API.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amany9000/Weather-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amany9000/Weather-App/issues"
+  },
+  "homepage": "https://github.com/amany9000/Weather-App#readme"
+}
