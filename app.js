@@ -25,7 +25,7 @@ var argv = yargs
 				if(error)
 					console.log(error);
 				else
-					console.log("location: " ,message.address,"\nCurrent Temperature : ",Message.currentTemp)
+					console.log("location: " ,message.address,"\nCurrent Apparent Temperature : ",Message.currentTemp)
 			});
 		}
 		

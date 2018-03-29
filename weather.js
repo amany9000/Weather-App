@@ -1,4 +1,4 @@
-console.log("starting weather")
+//console.log("starting weather")
 var getWeather= function (message, callback){
 	var request = require("request");
 	request({
