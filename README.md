@@ -11,6 +11,7 @@ run npm install
 Using the App
 run the app using:- 
 $ node --address "City or location"
+
 You can use --a instead of address.
 
 Note: Location pin-pointing restricted to Google Maps API. 
