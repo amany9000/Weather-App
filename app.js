@@ -20,24 +20,18 @@ var argv = yargs
 		console.log("Address not provided. Using default address.")
 	}
 
-	geocode.geo(argv.address, (error,message) => {
-		if(error)
-			console.log( error);
-		else{
-			weather.getWeather(message,(error,Message) => {
-				//console.log(Message)
-				if(error)
-					console.log(error);
-				else
-					console.log(sprintf("%-25s","location:"),message.address);
-					console.log(sprintf("%-25s","Current Temperature :"),Message.currentTemp);
-					console.log(sprintf("%-25s","Precipitation:"), Message.precipitation);
-					console.log(sprintf("%-25s","Humdity :"), Message.humidity);
-					console.log(sprintf("%-25s","Wind Speed :"),Message.wind);
-					console.log(sprintf("%-25s","Visibility :"), Message.visibility);
-			});
-		}
+geocode.geo(argv.address).then((location) => {
+	console.log(sprintf("%-25s","location:"),location.address);
+	return weather.getWeather(location);
+	}).then((message) => {	
+		console.log(sprintf("%-25s","Current Temperature :"),message.currentTemp ,sprintf("%cF or",176), Math.round(((message.currentTemp - 32)*5)/9), sprintf("%cC",176));
+		console.log(sprintf("%-25s","Precipitation:"), message.precipitation);
+		console.log(sprintf("%-25s","Humdity :"), message.humidity);
+		console.log(sprintf("%-25s","Wind Speed :"),message.wind);
+		console.log(sprintf("%-25s","Visibility :"), message.visibility);
+}).catch((errorMessage) =>{
+	console.log(errorMessage);
+});
 		
-	});
 
 	
