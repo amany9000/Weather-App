@@ -14,7 +14,11 @@ $ node --address "City or location"
 
 You can use --a instead of address.
 
+<<<<<<< HEAD
 Notes: 
 Location pin-pointing and the number of quesries of a particular location restricted to Google Maps API.
 
 This branch uses axios package instead of promises which are used in master branch.
+=======
+Note: Location pin-pointing and the number of queries of a particular location restricted to Google Maps API. 
+>>>>>>> 97dfd297ea76e5b5016e36d68b20b4f852e3ec64
