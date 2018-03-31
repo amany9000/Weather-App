@@ -4,11 +4,13 @@ Uses the Google Maps API for geolocation (retrieving latitude and Longitutde).
 The Dark Sky Forecast API is used for retireving the the curent weather statistics of the geolocation provided by the Google Maps API. -address "City or Adlocation
 
 Installation
+===
 Clone The repo
 cd into the directory
-run npm install
+run  - npm install
 
 Using the App
+===
 run the app using:- 
 $ node --address "City or location"
 
