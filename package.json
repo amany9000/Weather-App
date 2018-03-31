@@ -1,7 +1,7 @@
 {
   "name": "weather-app",
   "version": "1.0.0",
-  "main": "weather.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -9,6 +9,8 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.85.0",
+    "sprintf": "^0.1.5",
+    "sprintf-js": "^1.1.1",
     "yargs": "^11.0.0"
   },
   "devDependencies": {},

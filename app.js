@@ -3,10 +3,10 @@ var yargs = require("yargs");
 var geocode = require("./geocode.js");
 var weather = require("./weather.js")
 var request = require("request");
+var sprintf=require("sprintf-js").sprintf;
 var argv = yargs
 	.options({
 		a:{
-			demand : true,
 			description : "strores address",
 			alias : "address",
 			string : true
@@ -15,7 +15,11 @@ var argv = yargs
 	.help()
 	.alias("help" , "h")
 	.argv;
-	//console.log(encodeURIComponent(argv.address))
+	if(argv.address== "" || argv.address == undefined){
+		argv.address = 382007
+		console.log("Address not provided. Using default address.")
+	}
+
 	geocode.geo(argv.address, (error,message) => {
 		if(error)
 			console.log( error);
@@ -25,7 +29,12 @@ var argv = yargs
 				if(error)
 					console.log(error);
 				else
-					console.log("location: " ,message.address,"\nCurrent Apparent Temperature : ",Message.currentTemp)
+					console.log(sprintf("%-25s","location:"),message.address);
+					console.log(sprintf("%-25s","Current Temperature :"),Message.currentTemp);
+					console.log(sprintf("%-25s","Precipitation:"), Message.precipitation);
+					console.log(sprintf("%-25s","Humdity :"), Message.humidity);
+					console.log(sprintf("%-25s","Wind Speed :"),Message.wind);
+					console.log(sprintf("%-25s","Visibility :"), Message.visibility);
 			});
 		}
 		
