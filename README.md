@@ -18,4 +18,4 @@ You can use --a instead of address.
 
 Note: 
 Location pin-pointing and the number of queries of a particular location restricted to Google Maps API. 
-This brach uses the axios package in place of request package and promises used in the master branch.
+This branch uses the axios package in place of the request package and promises used in the master branch.
