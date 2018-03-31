@@ -14,4 +14,4 @@ $ node --address "City or location"
 
 You can use --a instead of address.
 
-Note: Location pin-pointing restricted to Google Maps API. 
+Note: Location pin-pointing and the number of quesries of a particular location restricted to Google Maps API. 
