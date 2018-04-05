@@ -8,6 +8,7 @@
   "author": "amany9000",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.3",
     "request": "^2.85.0",
     "sprintf": "^0.1.5",
     "sprintf-js": "^1.1.1",
