@@ -7,7 +7,7 @@ var sprintf=require("sprintf-js").sprintf;
 var argv = yargs
 	.options({
 		a:{
-			description : "strores address",
+			description : "stores address",
 			alias : "address",
 			string : true
 		}
@@ -17,7 +17,7 @@ var argv = yargs
 	.argv;
 	if(argv.address== "" || argv.address == undefined){
 		argv.address = 382007
-		console.log("Address not provided. Using default address.")
+		console.log("Address not provided. Using the default address.")
 	}
 
 geocode.geo(argv.address).then((location) => {
