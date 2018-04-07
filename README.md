@@ -1,5 +1,5 @@
 # Weather-App
-Node-based weather app which takes a location (address or postal code) and provides its real-time weather statistics. Uses the Google Maps API for geolocation (retrieving latitude and Longitude). The Dark Sky Forecast API is used for retrieving the current weather statistics of the geolocation provided by the Google Maps API.
+Node-based weather app which takes a location (address or postal code) and provides its real-time weather statistics. Uses the Google Maps API for geolocation (retrieving latitude and Longitude). The Dark Sky Forecast API is used for retrieving the current weather statistics of the geolocation provided by Google Maps API.
 
 Installation
 ===
